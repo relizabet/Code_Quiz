@@ -1,5 +1,5 @@
 // $("#introSection").hide("click", );
-const introBtn = $("#introBtn");
+const startBtn = $("#startBtn");
 const introSection = $("#introSection");
 const questionSection = $("#questionSection");
 const highScoreSection = $("#highScore");
@@ -18,7 +18,7 @@ $(document).ready(function () {
       answerB: "B. Atari",
       answerC: "C. Nintendo",
       answerD: "D. Microsoft",
-      correctAnswer: "B",
+      correctAnswer: "B. Atari",
     },
     {
       question: "This is question number two",
@@ -58,7 +58,7 @@ $(document).ready(function () {
   questionSection.hide();
   highScoreSection.hide();
 
-  // when introBtn is clicked do:
+  // when startBtn is clicked do:
   function showQuestions() {
     let optionA = $("#optionA");
     let optionB = $("#optionB");
@@ -73,17 +73,20 @@ $(document).ready(function () {
     $(optionD).text(quizObject[index].answerD);
   }
 
-  introBtn.click(function () {
-    console.log(quizObject[index]);
+  startBtn.click(function () {
     introSection.hide();
     questionSection.show(showQuestions);
-    console.log(index);
-
-    console.log(index);
   });
 
   clickAnswer.click(function () {
     index += 1;
     questionSection.show(showQuestions);
+  });
+
+  // if statement to check truthy falsy of click
+  clickAnswer.click(function () {
+    if (quizObject[index].correctAnswer === true) {
+      console.log(true);
+    }
   });
 });
