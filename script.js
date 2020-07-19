@@ -127,7 +127,7 @@ $(document).ready(function () {
       correctAlert.show();
       setTimeout(function () {
         correctAlert.hide();
-      }, 1000);
+      }, 700);
       countdownSeconds += 5;
       index += 1;
       questionSection.show(showQuestions);
@@ -141,7 +141,7 @@ $(document).ready(function () {
       incorrectAlert.show();
       setTimeout(function () {
         incorrectAlert.hide();
-      }, 1000);
+      }, 700);
       countdownSeconds -= 10;
       index += 1;
       questionSection.show(showQuestions);
