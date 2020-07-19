@@ -38,7 +38,7 @@ $(document).ready(function () {
   incorrectAlert.hide();
 
   // questions to iterate through for quiz
-  // don't forget to credit the questions
+  // questions courtesy of http://www.trivia90s.com/31_video_game.htm
   let quizObject = [
     {
       question:
@@ -50,36 +50,40 @@ $(document).ready(function () {
       correctAnswer: "B. Atari",
     },
     {
-      question: "This is question number two",
-      answerA: "A. This is option A",
-      answerB: "B. This is option B",
-      answerC: "C. This is option C",
-      answerD: "D. This is option D",
-      correctAnswer: "C. This is option C",
+      question:
+        "What graphic adventure by Rand and Robyn Miller did PC Computing dub the 'first New Age game'?",
+      answerA: "A. Mario",
+      answerB: "B. Diablo",
+      answerC: "C. Myst",
+      answerD: "D. Roller Coaster Tycoon",
+      correctAnswer: "C. Myst",
     },
     {
-      question: "This is question number three",
-      answerA: "A. This is option A",
-      answerB: "B. This is option B",
-      answerC: "C. This is option C",
-      answerD: "D. This is option D",
-      correctAnswer: "A. This is option A",
+      question:
+        "What was Hiroshi Yamauchi's cleverly named successor to the Nintendo Entertainment System?",
+      answerA: "A. The Super Nintendo Entertainment System",
+      answerB: "B. The Virtual Boy",
+      answerC: "C. The Neo Geo",
+      answerD: "D. The Nintendo 64",
+      correctAnswer: "A. The Super Nintendo Entertainment System",
     },
     {
-      question: "This is question number four",
-      answerA: "A. This is option A",
-      answerB: "B. This is option B",
-      answerC: "C. This is option C",
-      answerD: "D. This is option D",
-      correctAnswer: "B. This is option B",
+      question:
+        "What graphic adventure by Rand and Robyn Miller did PC Computing dub the 'first New Age game'?",
+      answerA: "A. Sonic the Hedgehog",
+      answerB: "B. Crash Bandicoot",
+      answerC: "C. Donkey Kong",
+      answerD: "D. The Legend of Zelda",
+      correctAnswer: "B. Crash Bandicoot",
     },
     {
-      question: "This is question number five",
-      answerA: "A. This is option A",
-      answerB: "B. This is option B",
-      answerC: "C. This is option C",
-      answerD: "D. This is option D",
-      correctAnswer: "D. This is option D",
+      question:
+        "What videogame hero must unseat King K. Rool in a 3-D update of a Nintendo classic?",
+      answerA: "A. PaRappa the Rapper",
+      answerB: "B. StarFox 64",
+      answerC: "C. Thief: the Dark Project",
+      answerD: "D. Donkey Kong",
+      correctAnswer: "D. Donkey Kong",
     },
   ];
 
