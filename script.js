@@ -10,7 +10,7 @@ let highScoreForm = $(".highScoreForm");
 let initialsText = $("#initialsText");
 let initialForm = $("#initialForm");
 let scoreCount = $("#scoreCount");
-let initialsInput = $("#inputInitials");
+let initialsInput = $("#initialsInput");
 
 let correctAlert = $(".correctAlert");
 let incorrectAlert = $(".incorrectAlert");
@@ -24,6 +24,7 @@ let timer = $("#timer");
 let countdownSeconds = 59;
 let score = countdownSeconds.text;
 let index = 0;
+let highScore;
 let finalScore;
 
 // let initialArr = [];
@@ -90,6 +91,7 @@ $(document).ready(function () {
       if (countdownSeconds < 0) {
         clearInterval(timerTime);
         questionSection.hide(), 1000;
+        highScoreSection.show();
       }
     }, 1000);
     //advance to high score
@@ -104,9 +106,19 @@ $(document).ready(function () {
     $(optionD).text(quizObject[index].answerD);
   }
 
-  // function storeInitials() {
-  //   storeInitials.innerText = "";
+  // function highScoreSomething() {
+  //   if (finalScore !== null) {
+  //     if (finalScore > "highScore") {
+  //       localStorage.setItem("highScore", score);
+  //     }
+  //   } else {
+  //     localStorage.setItem("highScore", score);
+  //   }
   // }
+
+  // function storeInitials() {}
+
+  console.log(localStorage);
 
   startBtn.click(function () {
     startTimer();
@@ -127,7 +139,7 @@ $(document).ready(function () {
       correctAlert.show();
       setTimeout(function () {
         correctAlert.hide();
-      }, 700);
+      }, 500);
       countdownSeconds += 5;
       index += 1;
       questionSection.show(showQuestions);
@@ -141,7 +153,7 @@ $(document).ready(function () {
       incorrectAlert.show();
       setTimeout(function () {
         incorrectAlert.hide();
-      }, 700);
+      }, 500);
       countdownSeconds -= 10;
       index += 1;
       questionSection.show(showQuestions);
@@ -166,6 +178,7 @@ $(document).ready(function () {
   highScoreButton.click(function () {
     questionSection.hide();
     highScoreSection.show();
+    highScoreSomething();
   });
 });
 // on event there has to be a value passed (how we acces data), the e can be anything, e stands for entire object of data that's passed on the event

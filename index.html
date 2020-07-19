@@ -74,19 +74,16 @@
       </header>
       <br class="mb-3" />
       <hr />
+      <br />
       <!-- store initials/score  -->
-      <div class="highscoreForm">
+      <div class="highscoreForm text-center">
         <form id="initialForm" method="POST">
-          <p>Score Count: <span id="scoreCount"></span></p>
-          <label for="initialsText">Add a Todo:</label>
-          <input
-            type="text"
-            placeholder="Your Initials: "
-            name="initialsText"
-            id="initialsText"
-          />
+          <h3>Your Score: <span id="scoreCount"></span></h3>
+          <br />
+          <label for="initialsText">Add Your Initials:</label>
+          <input type="text" name="initialsText" id="initialsText" />
         </form>
-        <ul id="input-initials"></ul>
+        <ul id="initialsInput"></ul>
       </div>
     </div>
     <script
