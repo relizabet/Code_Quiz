@@ -5,7 +5,8 @@ const questionSection = $("#questionSection");
 const highScoreSection = $("#highScore");
 const highScoreButton = $("#highScoreButton");
 const clickAnswer = $(".clickAnswer");
-const timer = $("#timer");
+let timer = $("#timer");
+let countdownSeconds = 10;
 let score = 0;
 let index = 0;
 
@@ -58,6 +59,19 @@ $(document).ready(function () {
   questionSection.hide();
   highScoreSection.hide();
 
+  // timer & advance to high score
+  function startTimer() {
+    timerTime = setInterval(function () {
+      timer.text(countdownSeconds + " seconds");
+      countdownSeconds--;
+      if (countdownSeconds < 0) {
+        clearInterval(timerTime);
+        questionSection.hide();
+        highScoreSection.show(), 1000;
+      }
+    }, 1000);
+  }
+
   // when startBtn is clicked do:
   function showQuestions() {
     let optionA = $("#optionA");
@@ -74,6 +88,7 @@ $(document).ready(function () {
   }
 
   startBtn.click(function () {
+    startTimer();
     introSection.hide();
     questionSection.show(showQuestions);
   });
@@ -84,9 +99,9 @@ $(document).ready(function () {
   });
 
   // if statement to check truthy falsy of click
-  clickAnswer.click(function () {
-    if (quizObject[index].correctAnswer === true) {
-      console.log(true);
-    }
-  });
+  // clickAnswer.click(function () {
+  //   if (quizObject[index]. === quizObject.correctAnswer) {
+  //     console.log(true);
+  //   }
+  // });
 });
