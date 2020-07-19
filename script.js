@@ -6,11 +6,16 @@ const highScoreSection = $("#highScore");
 const highScoreButton = $("#highScoreButton");
 const clickAnswer = $(".clickAnswer");
 let timer = $("#timer");
-let countdownSeconds = 10;
+let countdownSeconds = 59;
 let score = 0;
 let index = 0;
 
 $(document).ready(function () {
+  // question and high score section should be hidden at start
+  questionSection.hide();
+  highScoreSection.hide();
+
+  // questions to iterate through for quiz
   let quizObject = [
     {
       question:
@@ -27,7 +32,7 @@ $(document).ready(function () {
       answerB: "B. This is option B",
       answerC: "C. This is option C",
       answerD: "D. This is option D",
-      correctAnswer: "C",
+      correctAnswer: "C. This is option C",
     },
     {
       question: "This is question number three",
@@ -35,7 +40,7 @@ $(document).ready(function () {
       answerB: "B. This is option B",
       answerC: "C. This is option C",
       answerD: "D. This is option D",
-      correctAnswer: "A",
+      correctAnswer: "A. This is option A",
     },
     {
       question: "This is question number four",
@@ -43,7 +48,7 @@ $(document).ready(function () {
       answerB: "B. This is option B",
       answerC: "C. This is option C",
       answerD: "D. This is option D",
-      correctAnswer: "B",
+      correctAnswer: "B. This is option B",
     },
     {
       question: "This is question number five",
@@ -51,13 +56,9 @@ $(document).ready(function () {
       answerB: "B. This is option B",
       answerC: "C. This is option C",
       answerD: "D. This is option D",
-      correctAnswer: "D",
+      correctAnswer: "D. This is option D",
     },
   ];
-
-  // question and high score section should be hidden at start
-  questionSection.hide();
-  highScoreSection.hide();
 
   // timer & advance to high score
   function startTimer() {
@@ -96,12 +97,18 @@ $(document).ready(function () {
   clickAnswer.click(function () {
     index += 1;
     questionSection.show(showQuestions);
+    if (correctAnswer.click() === true) {
+      alert("that's correct!");
+    }
   });
-
-  // if statement to check truthy falsy of click
-  // clickAnswer.click(function () {
-  //   if (quizObject[index]. === quizObject.correctAnswer) {
-  //     console.log(true);
-  //   }
-  // });
 });
+
+// finishing
+// _____________
+//
+// [] have questions be right or wrong
+// [] wrong questions deduct 10 seconds / right add 5
+// []
+// [] would like to randomize questions
+// [] fix rendering order issue
+// []
