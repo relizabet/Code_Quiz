@@ -161,11 +161,7 @@ $(document).ready(function () {
       questionSection.hide();
       highScoreSection.show();
     }
-
-    return finalScore;
   });
-
-  console.log(finalScore);
 
   highScoreButton.click(function () {
     questionSection.hide();
