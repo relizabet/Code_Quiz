@@ -26,7 +26,7 @@ let score = countdownSeconds.text;
 let index = 0;
 let finalScore;
 
-let initialArr = [];
+// let initialArr = [];
 
 $(document).ready(function () {
   // question and high score section should be hidden at start
