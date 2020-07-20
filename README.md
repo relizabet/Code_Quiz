@@ -29,8 +29,8 @@ To run the program please visit the <a href="https://relizabet.github.io/Code_Qu
 ### Examples of Program in Use
 
 ![Quiz Start](Assets/title_card.png)
-![High Score](Assets/high_score.png)
 ![Example Problem](Assets/example_problem.png)
+![High Score](Assets/high_score.png)
 
 ### Notes
 
