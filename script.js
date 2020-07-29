@@ -110,20 +110,6 @@ $(document).ready(function () {
     $(optionD).text(quizObject[index].answerD);
   }
 
-  // function highScoreSomething() {
-  //   if (finalScore !== null) {
-  //     if (finalScore > "highScore") {
-  //       localStorage.setItem("highScore", score);
-  //     }
-  //   } else {
-  //     localStorage.setItem("highScore", score);
-  //   }
-  // }
-
-  // function storeInitials() {}
-
-  console.log(localStorage);
-
   startBtn.click(function () {
     startTimer();
     introSection.hide();
@@ -182,29 +168,9 @@ $(document).ready(function () {
   highScoreButton.click(function () {
     questionSection.hide();
     highScoreSection.show();
-    highScoreSomething();
+  });
+
+  $("#initialsText").click(function (event) {
+    event.preventDefault();
   });
 });
-// on event there has to be a value passed (how we acces data), the e can be anything, e stands for entire object of data that's passed on the event
-// can access/ store/ use
-// look through e value console.log
-// work on parameters next time
-
-// finishing
-// _____________
-//
-// [x] have questions be right or wrong
-// [x] wrong questions deduct 10 seconds / right add 5
-// []
-// [] would like to randomize questions
-// [] fix rendering order issue
-// []
-
-// return correct answer
-// known when btn clicked [x] / [x] what btn it is
-// on click get text value being passed in [x]
-// compare innertext to correct answer [x]
-// on correct answer +10 seconds to timer
-//
-// alert correct answer [x]
-// advance [x]
