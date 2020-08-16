@@ -1,5 +1,7 @@
 # Code Quiz
 
+Take a timed quiz on 90's console games. For every correct answer you will gain 5 seconds, and for every wrong answer, you will lose 10. However many seconds you have remaining will be your score. Press the start button to play.
+
 ## About the Project
 
 For this assignment we were asked to meet the following criteria:
@@ -34,7 +36,7 @@ To run the program please visit the <a href="https://relizabet.github.io/Code_Qu
 
 ### Notes
 
-- I was unable to complete the high score page in times
+- I was unable to complete the high score page in time.
 
 ## Authors
 
